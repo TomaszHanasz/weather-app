@@ -15,7 +15,7 @@ const WeatherCard = (props) => {
   return (
     <div className="weather-card">
       <h3>{city}</h3>
-      <img src={`http://openweathermap.org/img/w/${icon}.png`} />
+      <img src={`http://openweathermap.org/img/w/${icon}.png`} alt="weather" />
       <div className="temp-box">
         <p className="temp">{temperature}º</p>
         <div className="description">

@@ -54,6 +54,10 @@ button:active {
     width: 50%;
     height: 70vh;
   }
+
+  input {
+    height: 3rem;
+  }
 }
 
 @media screen and (max-width: 600px) {
