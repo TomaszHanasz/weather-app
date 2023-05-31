@@ -26,6 +26,10 @@ input {
   outline-style: none;
 }
 
+input::placeholder {
+  color: white;
+}
+
 button {
   font-family: "Comfortaa", sans-serif;
   width: 100%;

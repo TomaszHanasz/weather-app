@@ -6,7 +6,7 @@ import "./weatherApp.style.css";
 const WeatherApp = () => {
   const [city, setCity] = useState("");
   const [temperature, setTemperature] = useState(0);
-  const [description, setDescription] = useState("Weather");
+  const [description, setDescription] = useState("");
   const [feelsLikeTemp, setFeelsLikeTemp] = useState(0);
   const [humidity, setHumidity] = useState(0);
   const [wind, setWind] = useState(0);
@@ -15,6 +15,12 @@ const WeatherApp = () => {
 
   const onChangeHandler = (e) => {
     setSearchedCity(e.target.value);
+  };
+
+  const onKeyDownHandler = (e) => {
+    if (e.key === "Enter") {
+      onClickHandler();
+    }
   };
 
   const onClickHandler = async () => {
@@ -53,6 +59,7 @@ const WeatherApp = () => {
         placeholder="enter city name"
         onChange={onChangeHandler}
         value={searchedCity}
+        onKeyDown={onKeyDownHandler}
       />
       <button onClick={onClickHandler}>Get the weather</button>
     </div>
