@@ -1,5 +1,5 @@
 import React from "react";
-import Div100vh from "react-div-100vh";
+
 import "./weatherCard.style.css";
 
 const WeatherCard = (props) => {
@@ -14,7 +14,7 @@ const WeatherCard = (props) => {
   } = props;
 
   return (
-    <Div100vh className="weather-card">
+    <div className="weather-card">
       <h3>{city}</h3>
       <img src={`http://openweathermap.org/img/w/${icon}.png`} alt="weather" />
       <div className="temp-box">
@@ -26,7 +26,7 @@ const WeatherCard = (props) => {
           <p>Wind: {wind} mph</p>
         </div>
       </div>
-    </Div100vh>
+    </div>
   );
 };
 
