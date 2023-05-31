@@ -58,11 +58,16 @@ button:active {
   input {
     height: 3rem;
   }
+
+  button {
+    height: 3rem;
+  }
 }
 
 @media screen and (max-width: 600px) {
   .weather-container {
     width: 100%;
     height: 100vh;
+    max-height: -webkit-fill-available;
   }
 }
